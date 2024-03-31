@@ -16,6 +16,7 @@ type JWTMiddleware struct {
 	Log         *logger.Logger
 }
 
+// мидлвар
 func (j *JWTMiddleware) JWTMiddleware() func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		jwtCheck := func(w http.ResponseWriter, r *http.Request) {
